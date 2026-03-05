@@ -15,7 +15,7 @@ jobs:
     - name: Extract
       run: Expand-Archive ngrok-v3-stable-windows-amd64.zip
     - name: Auth
-      run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
+      run: .\ngrok-v3-stable-windows-amd64\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Enable TS
